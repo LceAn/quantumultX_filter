@@ -6,7 +6,7 @@
 将细分详细的各种网站分流细则
 
 #  目录细则
-‘’‘
+```
 Rules
 ├── /China/
 │  ├── /VideoApp/ -> 视频规则
@@ -23,4 +23,4 @@ Rules
 │  ├── Google.list -> Google服务规则
 ├── LICENSE
 └── Readme.md
-’‘’
+```
