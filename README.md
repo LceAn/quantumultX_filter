@@ -1,5 +1,5 @@
 # quantumultX_filter
-这里将放置23年新收集的一些新出现的网站，适用于QuantumultX的规则分流。
+这里将放置24年新收集的一些新出现的网站，适用于QuantumultX的规则分流。
 
 
 # 引言
