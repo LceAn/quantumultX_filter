@@ -7,20 +7,5 @@
 
 #  目录细则
 ```
-Rules
-├── /China/
-│  ├── /VideoApp/ -> 视频规则
-│  ├── /Weblist/ -> 论坛规则
-├── /global/
-├── /Advertising/
-│  ├── /NormalApp/ -> 常用 App 屏蔽
-│  ├── /VideoApp/ -> 视频 App 屏蔽
-├── /Games/
-│  ├── Game.list -> 游戏规则
-├── /AI/
-│  ├── AIs.list -> AI机器人规则
-├── /Google/
-│  ├── Google.list -> Google服务规则
-├── LICENSE
-└── Readme.md
+当前目录中有什么即是什么，其他的公共较多的这里直接去掉了，仅保留资源较少的内容
 ```
