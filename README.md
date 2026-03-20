@@ -74,21 +74,35 @@ RULE-SET,Surge_WeChat.list,微信国际版
 
 ## 📁 规则文件 | Rule Files
 
-### Quantumult X 规则
+### 原创规则 | Original Rules
 
 | 文件 | 说明 | 规则数 | 平台 |
 |------|------|--------|------|
 | **AI.list** | AI 服务分流规则 | 50+ | QX |
 | **WeChat.list** | 微信国际版规则 | 60+ | QX |
 | **Work_local_filter.list** | 工作本地分流 | 3+ | QX |
-
-### Surge 规则
-
-| 文件 | 说明 | 规则数 | 平台 |
-|------|------|--------|------|
-| **Surge_AI.list** | AI 服务分流规则 | 50+ | Surge |
-| **Surge_WeChat.list** | 微信国际版规则 | 60+ | Surge |
 | **Surge_ZD2025.list** | ZD2025 完整配置规则 | 200+ | Surge |
+
+### 外部规则 | External Rules
+
+收集自其他开源项目的规则文件，已标注来源。
+
+| 分类 | 文件数 | 来源 |
+|------|--------|------|
+| 🤖 AI 服务 | 3 | blackmatrix7 |
+| 💬 社交媒体 | 6 | blackmatrix7 |
+| 🎬 流媒体 | 10 | blackmatrix7 |
+| 🛒 购物支付 | 5 | blackmatrix7 |
+| 💼 办公生产力 | 11 | blackmatrix7 |
+| 🐱 开发技术 | 4 | blackmatrix7 |
+| 🎮 游戏平台 | 5 | blackmatrix7 |
+| 🌍 地区规则 | 3 | blackmatrix7 |
+| 📥 下载测速 | 3 | skk.moe |
+| 🌐 全局规则 | 3 | skk.moe |
+
+**总计：** 52 个外部规则文件  
+**来源：** [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script), [skk.moe/ruleset](https://github.com/Loyalsoldier/clash-rules)  
+**详情：** 查看 [external-rules/README.md](external-rules/README.md)
 
 ---
 
@@ -98,8 +112,10 @@ RULE-SET,Surge_WeChat.list,微信国际版
 
 | 指标 | 数值 |
 |------|------|
-| **规则文件** | 6 个 |
-| **总规则数** | 370+ 条 |
+| **原创规则文件** | 4 个 |
+| **外部规则文件** | 52 个 |
+| **总规则文件** | 56 个 |
+| **总规则数** | 2000+ 条 |
 | **支持平台** | Quantumult X, Surge |
 | **更新频率** | 每日更新 |
 
