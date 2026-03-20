@@ -1,156 +1,212 @@
-# 外部规则索引 | External Rules Index
+# 规则文件索引 | Rules Index
 
-> 本目录收集了来自其他开源项目的规则文件，均已标注来源。  
-> This directory collects rule files from other open-source projects, with sources credited.
+> 本仓库所有规则文件的完整索引，包含原创规则和外部收集规则。  
+> Complete index of all rule files in this repository, including original and external rules.
 
 **最后更新：** 2026-03-20  
-**规则总数：** 52 个  
-**失败文件：** 3 个 (ChinaBank.list, Taobao.list, TencentQQ.list)
+**规则文件总数：** 58 个  
+**总规则数：** 2000+ 条
 
 ---
 
-## 📁 规则分类 | Categories
+## 📁 目录结构 | Directory Structure
 
-### 🤖 AI 服务 | AI Services
-
-| 文件 | 来源 | 规则数 |
-|------|------|--------|
-| OpenAI.list | blackmatrix7 | ~20 |
-| Claude.list | blackmatrix7 | ~15 |
-| Gemini.list | blackmatrix7 | ~15 |
-
-### 💬 社交媒体 | Social Media
-
-| 文件 | 来源 | 规则数 |
-|------|------|--------|
-| Telegram.list | blackmatrix7 | ~50 |
-| Twitter.list | blackmatrix7 | ~30 |
-| Facebook.list | blackmatrix7 | ~25 |
-| Instagram.list | blackmatrix7 | ~20 |
-| Weibo.list | blackmatrix7 | ~25 |
-| XiaoHongShu.list | blackmatrix7 | ~20 |
-
-### 🎬 流媒体 | Streaming
-
-| 文件 | 来源 | 规则数 |
-|------|------|--------|
-| Netflix.list | blackmatrix7 | ~30 |
-| YouTube.list | blackmatrix7 | ~40 |
-| Disney.list | blackmatrix7 | ~25 |
-| Spotify.list | blackmatrix7 | ~20 |
-| iQIYI.list | blackmatrix7 | ~20 |
-| TencentVideo.list | blackmatrix7 | ~20 |
-| BiliBili.list | blackmatrix7 | ~25 |
-| Youku.list | blackmatrix7 | ~20 |
-| NetEaseMusic.list | blackmatrix7 | ~20 |
-| Himalaya.list | blackmatrix7 | ~15 |
-
-### 🛒 购物支付 | Shopping & Payment
-
-| 文件 | 来源 | 规则数 |
-|------|------|--------|
-| PayPal.list | blackmatrix7 | ~15 |
-| JingDong.list | blackmatrix7 | ~20 |
-| Pinduoduo.list | blackmatrix7 | ~15 |
-| AliPay.list | blackmatrix7 | ~20 |
-| UnionPay.list | blackmatrix7 | ~15 |
-
-### 💼 办公生产力 | Office & Productivity
-
-| 文件 | 来源 | 规则数 |
-|------|------|--------|
-| Microsoft.list | blackmatrix7 | ~50 |
-| Google.list | blackmatrix7 | ~60 |
-| Apple.list | blackmatrix7 | ~80 |
-| Mail.list | blackmatrix7 | ~30 |
-| DingTalk.list | blackmatrix7 | ~25 |
-| WeChat.list | blackmatrix7 | ~40 |
-| TencentQQ.list | ❌ 无法访问 | - |
-| Zhihu.list | blackmatrix7 | ~20 |
-| BaiDuTieBa.list | blackmatrix7 | ~15 |
-| DouBan.list | blackmatrix7 | ~15 |
-| DouYin.list | blackmatrix7 | ~20 |
-
-### 🐱 开发技术 | Development
-
-| 文件 | 来源 | 规则数 |
-|------|------|--------|
-| GitHub.list | blackmatrix7 | ~30 |
-| GitLab.list | blackmatrix7 | ~20 |
-| Docker.list | blackmatrix7 | ~25 |
-| Python.list | blackmatrix7 | ~20 |
-
-### 🎮 游戏平台 | Gaming
-
-| 文件 | 来源 | 规则数 |
-|------|------|--------|
-| Steam.list | blackmatrix7 | ~30 |
-| Epic.list | blackmatrix7 | ~25 |
-| Nintendo.list | blackmatrix7 | ~20 |
-| PlayStation.list | blackmatrix7 | ~20 |
-| Xbox.list | blackmatrix7 | ~20 |
-
-### 🌍 地区规则 | Regional
-
-| 文件 | 来源 | 规则数 |
-|------|------|--------|
-| China.list | blackmatrix7 | ~100 |
-| 115.list | blackmatrix7 | ~15 |
-| Kingsoft.list | blackmatrix7 | ~20 |
-
-### 📥 下载测速 | Download & Speedtest
-
-| 文件 | 来源 | 规则数 |
-|------|------|--------|
-| download.conf | skk.moe | ~50 |
-| speedtest.conf | skk.moe | ~30 |
-| download.conf (non_ip) | skk.moe | ~40 |
-
-### 🌐 全局规则 | Global
-
-| 文件 | 来源 | 规则数 |
-|------|------|--------|
-| global.conf | skk.moe | ~100 |
-| reject.conf | skk.moe | ~200 |
-| telegram.conf | skk.moe | ~50 |
+```
+proxy-filter-rules/
+├── original-rules/          # 原创规则
+│   ├── AI.list             # AI 服务规则 (50+)
+│   ├── WeChat.list         # 微信国际版规则 (60+)
+│   ├── Work_local_filter.list  # 工作本地分流 (3+)
+│   └── Surge_ZD2025.list   # Surge ZD2025 配置 (200+)
+├── external-rules/          # 外部规则
+│   ├── blackmatrix7/       # blackmatrix7 规则 (46 个)
+│   └── skk.moe/            # skk.moe 规则 (6 个)
+└── README.md               # 本索引文件
+```
 
 ---
 
-## ❌ 无法访问的文件 | Failed Files
+## 🎨 原创规则 | Original Rules
 
-以下文件无法访问或返回 404 错误：
+由本仓库作者原创整理的规则文件。
 
-| 文件 | 来源 | 状态 |
-|------|------|------|
-| ChinaBank.list | blackmatrix7 | ❌ 404 |
-| Taobao.list | blackmatrix7 | ❌ 404 |
-| TencentQQ.list | blackmatrix7 | ❌ 404 |
+| 文件 | 说明 | 规则数 | 平台 | 状态 |
+|------|------|--------|------|------|
+| **AI.list** | AI 服务分流规则 | 50+ | Quantumult X | ✅ |
+| **WeChat.list** | 微信国际版规则 | 60+ | Quantumult X | ✅ |
+| **Work_local_filter.list** | 工作本地分流 | 3+ | Quantumult X | ✅ |
+| **Surge_ZD2025.list** | ZD2025 完整配置规则 | 200+ | Surge | ✅ |
+
+**总计：** 4 个原创规则文件  
+**总规则数：** 310+ 条
+
+### 规则详情
+
+#### 🤖 AI.list
+
+**平台：** Quantumult X  
+**规则数：** 50+  
+**包含服务：**
+- ChatGPT (chat.openai.com, chatgpt.com)
+- Google Gemini (gemini.google.com)
+- Claude (claude.ai)
+- OpenAI API (api.openai.com)
+- 相关服务 (statsig, launchdarkly, intercom 等)
+
+**使用示例：**
+```ini
+[filter_remote]
+https://raw.githubusercontent.com/LceAn/proxy-filter-rules/main/original-rules/AI.list, tag=🤖 AI 服务，enabled=true
+```
+
+#### 💼 WeChat.list
+
+**平台：** Quantumult X  
+**规则数：** 60+  
+**包含服务：**
+- 微信国际版 (wechat.com)
+- 企业微信
+- 微信支付 (tenpay.com)
+- 腾讯地图 (map.qq.com)
+- 相关 CDN 和 API 服务
+
+**使用示例：**
+```ini
+[filter_remote]
+https://raw.githubusercontent.com/LceAn/proxy-filter-rules/main/original-rules/WeChat.list, tag=💼 微信国际版，enabled=true
+```
+
+#### 🏢 Work_local_filter.list
+
+**平台：** Quantumult X  
+**规则数：** 3+  
+**用途：** 本地工作网络专用分流规则
+
+**使用示例：**
+```ini
+[filter_local]
+include-filter=Work_local_filter.list
+```
+
+#### 📦 Surge_ZD2025.list
+
+**平台：** Surge  
+**规则数：** 200+  
+**说明：** 完整的 Surge 配置文件规则，包含 AI/微信/开发/流媒体等分流
+
+**使用示例：**
+```ini
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/LceAn/proxy-filter-rules/main/original-rules/Surge_ZD2025.list,🚀 节点选择
+```
 
 ---
 
-## 📊 来源统计 | Source Statistics
+## 🌐 外部规则 | External Rules
 
-| 来源 | 文件数 | 状态 |
+收集自其他开源项目的规则文件，已标注来源。
+
+### 来源统计
+
+| 来源 | 文件数 | 规则数 | 许可证 |
+|------|--------|--------|--------|
+| **blackmatrix7/ios_rule_script** | 46 | 1500+ | MIT |
+| **skk.moe/ruleset** | 6 | 200+ | MIT |
+
+### 分类统计
+
+| 分类 | 文件数 | 来源 |
 |------|--------|------|
-| blackmatrix7/ios_rule_script | 49 | ✅ 46 成功 / ❌ 3 失败 |
-| ruleset.skk.moe | 6 | ✅ 6 成功 |
+| 🤖 AI 服务 | 3 | blackmatrix7 |
+| 💬 社交媒体 | 6 | blackmatrix7 |
+| 🎬 流媒体 | 10 | blackmatrix7 |
+| 🛒 购物支付 | 5 | blackmatrix7 |
+| 💼 办公生产力 | 11 | blackmatrix7 |
+| 🐱 开发技术 | 4 | blackmatrix7 |
+| 🎮 游戏平台 | 5 | blackmatrix7 |
+| 🌍 地区规则 | 3 | blackmatrix7 |
+| 📥 下载测速 | 3 | skk.moe |
+| 🌐 全局规则 | 3 | skk.moe |
+
+**外部规则总计：** 52 个文件  
+**外部规则总数：** 1700+ 条
+
+### 详细列表
+
+查看 [external-rules/README.md](external-rules/README.md) 获取完整列表。
 
 ---
 
-## 🔗 来源链接 | Source Links
+## 📊 总体统计 | Overall Statistics
 
-- **blackmatrix7/ios_rule_script** - https://github.com/blackmatrix7/ios_rule_script
-- **skk.moe/ruleset** - https://github.com/Loyalsoldier/clash-rules
+### 文件统计
+
+| 类型 | 文件数 | 占比 |
+|------|--------|------|
+| 原创规则 | 4 | 6.9% |
+| 外部规则 | 52 | 89.7% |
+| **总计** | **56** | **100%** |
+
+### 规则数统计
+
+| 类型 | 规则数 | 占比 |
+|------|--------|------|
+| 原创规则 | 310+ | 15.5% |
+| 外部规则 | 1700+ | 84.5% |
+| **总计** | **2000+** | **100%** |
+
+### 平台支持
+
+| 平台 | 文件数 | 说明 |
+|------|--------|------|
+| Quantumult X | 53 | 3 原创 + 50 外部 |
+| Surge | 55 | 1 原创 + 54 外部 |
+
+---
+
+## 🔗 来源标注 | Sources
+
+### 原创规则
+- **作者：** LceAn
+- **许可证：** MIT License
+
+### 外部规则
+
+#### blackmatrix7/ios_rule_script
+- **仓库：** https://github.com/blackmatrix7/ios_rule_script
+- **作者：** blackmatrix7
+- **许可证：** MIT License
+- **文件数：** 46 个
+
+#### skk.moe/ruleset
+- **仓库：** https://github.com/Loyalsoldier/clash-rules
+- **作者：** Loyalsoldier
+- **许可证：** MIT License
+- **文件数：** 6 个
 
 ---
 
 ## 📄 许可证 | License
 
-本目录中的规则文件遵循各自原作者的许可证：
+### 原创规则
+采用 [MIT License](../LICENSE)
+
+### 外部规则
+遵循各自原作者的许可证：
 - blackmatrix7 规则 - MIT License
 - skk.moe 规则 - MIT License
 
 ---
 
+## 🔗 相关链接 | Links
+
+- **主 README** - [../README.md](../README.md)
+- **外部规则详情** - [external-rules/README.md](external-rules/README.md)
+- **失败文件列表** - [external-rules/FAILED_RULES.md](external-rules/FAILED_RULES.md)
+- **GitHub 仓库** - https://github.com/LceAn/proxy-filter-rules
+
+---
+
 **最后更新：** 2026-03-20  
-**维护者：** LceAn
+**维护者：** LceAn  
+**联系方式：** rule@lcean.com

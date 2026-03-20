@@ -36,16 +36,16 @@ This repository collects proxy filter rules for **Quantumult X** and **Surge**, 
 
 ```ini
 [filter_remote]
-https://raw.githubusercontent.com/LceAn/proxy-filter-rules/main/AI.list, tag=AI 服务，enabled=true
-https://raw.githubusercontent.com/LceAn/proxy-filter-rules/main/WeChat.list, tag=微信国际版，enabled=true
+https://raw.githubusercontent.com/LceAn/proxy-filter-rules/main/original-rules/AI.list, tag=AI 服务，enabled=true
+https://raw.githubusercontent.com/LceAn/proxy-filter-rules/main/original-rules/WeChat.list, tag=微信国际版，enabled=true
 ```
 
 #### 方法二：本地引用
 
 ```ini
 [filter_local]
-include-filter=AI.list
-include-filter=WeChat.list
+include-filter=original-rules/AI.list
+include-filter=original-rules/WeChat.list
 ```
 
 ---
@@ -76,12 +76,16 @@ RULE-SET,Surge_WeChat.list,微信国际版
 
 ### 原创规则 | Original Rules
 
+原创整理的规则文件。
+
 | 文件 | 说明 | 规则数 | 平台 |
 |------|------|--------|------|
-| **AI.list** | AI 服务分流规则 | 50+ | QX |
-| **WeChat.list** | 微信国际版规则 | 60+ | QX |
-| **Work_local_filter.list** | 工作本地分流 | 3+ | QX |
-| **Surge_ZD2025.list** | ZD2025 完整配置规则 | 200+ | Surge |
+| **original-rules/AI.list** | AI 服务分流规则 | 50+ | QX |
+| **original-rules/WeChat.list** | 微信国际版规则 | 60+ | QX |
+| **original-rules/Work_local_filter.list** | 工作本地分流 | 3+ | QX |
+| **original-rules/Surge_ZD2025.list** | ZD2025 完整配置规则 | 200+ | Surge |
+
+**小计：** 4 个文件，310+ 条规则
 
 ### 外部规则 | External Rules
 
@@ -100,8 +104,7 @@ RULE-SET,Surge_WeChat.list,微信国际版
 | 📥 下载测速 | 3 | skk.moe |
 | 🌐 全局规则 | 3 | skk.moe |
 
-**总计：** 52 个外部规则文件  
-**来源：** [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script), [skk.moe/ruleset](https://github.com/Loyalsoldier/clash-rules)  
+**小计：** 52 个文件，1700+ 条规则  
 **详情：** 查看 [external-rules/README.md](external-rules/README.md)
 
 ---
