@@ -1,0 +1,134 @@
+[Rule]
+DOMAIN-SUFFIX,steampowered.com,"⚡️ 主力高速"
+PROCESS-NAME,"/Applications/Termius.app/Contents/Frameworks/Termius Helper.app/Contents/MacOS/Termius Helper","🏢 国内直连"
+DOMAIN-SUFFIX,netease.com,"🛜 移动热点"
+# ============================================
+# 1. 本地/自定义规则
+# ============================================
+SRC-IP,192.168.2.107,"🏢 国内直连"
+DOMAIN-SUFFIX,mi.com,"🏢 国内直连"
+DOMAIN-SUFFIX,xiaomi.net,"🏢 国内直连"
+DOMAIN-SUFFIX,xiaomi.com,"🏢 国内直连"
+DOMAIN-SUFFIX,miui.com,"🏢 国内直连"
+# ============================================
+# 2. 国外 - 下载与系统更新
+# ============================================
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list,"☁️ Microsoft"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple.list,"🍎 Apple"
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/download.conf,"🐌 大额下载",extended-matching
+RULE-SET,https://ruleset.skk.moe/List/non_ip/download.conf,"🐌 大额下载",extended-matching
+
+# ============================================
+# 3. 国外 - 开发技术
+# ============================================
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list,"🐱 GitHub"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitLab/GitLab.list,"🦊 GitLab"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Docker/Docker.list,"🐳 Docker"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Python/Python.list,"🐍 Python"
+
+# ============================================
+# 4. 国外 - 高速服务 (重点修复区域)
+# ============================================
+# --- 🔴 Google 翻译修复 (必须走美国节点) ---
+# Chrome 内置翻译和网页翻译依赖这些域名，且通常屏蔽香港/国内 IP
+DOMAIN-SUFFIX,translate.googleapis.com,"🇺🇸 美国节点"
+DOMAIN-SUFFIX,translate.google.com,"🇺🇸 美国节点"
+DOMAIN-SUFFIX,translate.google.cn,"🇺🇸 美国节点"
+
+# AI
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list,"🤖 AI 服务"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Claude/Claude.list,"🤖 AI 服务"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Gemini/Gemini.list,"🤖 AI 服务"
+# 社媒
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list,"💬 Telegram"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list,"🐦 Twitter"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Instagram/Instagram.list,"📸 Instagram"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Facebook/Facebook.list,"📘 Facebook"
+# 流媒体
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list,"📺 YouTube"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list,"🎬 Netflix"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Disney/Disney.list,"🐭 Disney+"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Spotify/Spotify.list,"🎶 Spotify"
+# 谷歌全家桶
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list,"☁️ Google"
+
+# ============================================
+# 5. 国内 - 办公生产力
+# ============================================
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list,"💬 微信"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TencentQQ/TencentQQ.list,"🐧 腾讯QQ"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DingTalk/DingTalk.list,"💼 钉钉"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Kingsoft/Kingsoft.list,"📝 WPS"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Mail/Mail.list,"📧 邮件服务"
+# 金融
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PayPal/PayPal.list,"💳 支付/银行"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaBank/ChinaBank.list,"💳 支付/银行"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AliPay/AliPay.list,"💳 支付/银行"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/UnionPay/UnionPay.list,"💳 支付/银行"
+
+# ============================================
+# 6. 国内 - 娱乐与隐私
+# ============================================
+# 音乐
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/NetEaseMusic/NetEaseMusic.list,"🎵 网易云音乐"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/Himalaya/Himalaya.list,"🧸 喜马拉雅"
+# 视频
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BiliBili/BiliBili.list,"📺 哔哩哔哩"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DouYin/DouYin.list,"📹 抖音"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/iQIYI/iQIYI.list,"🥝 爱奇艺"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TencentVideo/TencentVideo.list,"🥝 爱奇艺"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Youku/Youku.list,"🥝 爱奇艺"
+# 购物
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Taobao/Taobao.list,"🛍️ 淘宝"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/JingDong/JingDong.list,"🛒 京东"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Pinduoduo/Pinduoduo.list,"🛍️ 淘宝"
+# 社区
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Weibo/Weibo.list,"🧣 微博"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Zhihu/Zhihu.list,"💡 知乎"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/XiaoHongShu/XiaoHongShu.list,"📕 小红书"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DouBan/DouBan.list,"💡 知乎"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BaiDuTieBa/BaiDuTieBa.list,"💡 百度贴吧"
+# 游戏
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Steam/Steam.list,"🎮 Steam/Epic"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Epic/Epic.list,"🎮 Steam/Epic"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Nintendo/Nintendo.list,"🎮 Steam/Epic"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PlayStation/PlayStation.list,"🎮 Steam/Epic"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Xbox/Xbox.list,"🎮 Steam/Epic"
+DOMAIN-SUFFIX,pvp.net,"🎮 Steam/Epic"
+# 网盘
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/115/115.list,"💡 115"
+
+# ============================================
+# 7. 兜底与IP规则
+# ============================================
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,"🛑 广告拦截",extended-matching
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/speedtest.conf,"📉 网络测速",extended-matching
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/China/China.list,"🏢 国内直连"
+RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,"⚡️ 主力高速",extended-matching
+RULE-SET,LAN,"🏢 国内直连"
+RULE-SET,https://ruleset.skk.moe/List/ip/telegram.conf,"💬 Telegram"
+GEOIP,CN,"🏢 国内直连"
+FINAL,🐟 漏网之鱼,dns-failed
+
+[Host]
+mi.com = server
+xiaomi.net = server
+xiaomi.com = server
+xiaomiyoupin.com = server
+mijia.tech = server
+miot-spec.org = server
+miui.com = server
+
+[MITM]
+skip-server-cert-verify = true
+h2 = true
+ca-passphrase = 451FA893
+ca-p12 = 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
+
+[Script]
+network_info = type=generic,script-path=network_info.js
+Sub_info = type=generic,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,argument=url=https://j6m7unk4utm1cyk6.lcean.com/taobao/b60e9f162298ed0a03c68ff5fd78a0aa&reset_day=1&title=Subscription&icon=icloud.circle.fill&color=#0D918D
+
+[Panel]
+NetworkInfo = title=网络详情,content=正在获取网络信息...,style=info,script-name=network_info,update-interval=5
+Sub_info = script-name=Sub_info
